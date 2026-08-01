@@ -1,2 +1,675 @@
 # Iconic-Mono
 Iconic Mono
+/* =====================================================
+   BeOn.fun — Custom CSS «Iconic Mono»
+   Строгий чёрно-белый wireframe-стиль по мотивам
+   тумблер-темы Iconic (eggdesign): моноширинный шрифт,
+   тонкие чёрные рамки без скруглений, инверсные плашки
+   ===================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+/* ---- Переменные ---- */
+:root {
+  --ink:      #111111;
+  --paper:    #ffffff;
+  --line:     #111111;
+  --muted:    #6b6b6b;
+  --hover:    #f2f2f2;
+}
+
+/* ---- Фон страницы ---- */
+body.bodybg {
+  background: var(--paper) !important;
+  font-family: 'IBM Plex Mono', 'Space Mono', monospace !important;
+  font-size: 14px !important;
+  color: var(--ink) !important;
+}
+
+/* =====================================================
+   ВЕРХНЯЯ ПАНЕЛЬ — сплошная чёрная плашка
+   ===================================================== */
+
+.navbar {
+  background: var(--ink) !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  display: flex !important;
+  align-items: center !important;
+  flex-wrap: wrap !important;
+}
+
+.navbar-brand {
+  font-family: 'Space Mono', monospace !important;
+  font-weight: 700 !important;
+  font-size: 20px !important;
+  color: var(--paper) !important;
+  letter-spacing: 1px !important;
+  order: 1 !important;
+}
+
+.pc-menu {
+  margin-left: auto !important;
+  order: 2 !important;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: flex-end !important;
+}
+
+.navbar a.my-menu,
+.navbar .my-menu,
+.pc-menu a,
+.navbar .m2,
+.navbar .m2 a {
+  color: var(--paper) !important;
+  font-family: 'IBM Plex Mono', monospace !important;
+  font-size: 12px !important;
+  letter-spacing: 0.5px !important;
+}
+
+.navbar a.my-menu:hover,
+.pc-menu a:hover {
+  color: #cfcfcf !important;
+  text-decoration: underline !important;
+}
+
+.pc-menu ul { list-style: none !important; padding-left: 0 !important; }
+.pc-menu ul li { list-style: none !important; padding-left: 0 !important; }
+.pc-menu ul li::before { content: '- ' !important; color: var(--paper) !important; }
+
+/* =====================================================
+   ХЛЕБНЫЕ КРОШКИ
+   ===================================================== */
+
+.crumbs {
+  background: var(--paper) !important;
+  border: 1px solid var(--line) !important;
+  border-radius: 0 !important;
+  font-family: 'IBM Plex Mono', monospace !important;
+  font-size: 13px !important;
+  color: var(--ink) !important;
+  padding: 8px 14px !important;
+}
+
+.crumbs a { color: var(--ink) !important; text-decoration: underline !important; }
+
+.pagination, .pagination a {
+  font-family: 'Space Mono', monospace !important;
+  font-size: 13px !important;
+  color: var(--ink) !important;
+}
+
+.pagination a:hover { background: var(--ink) !important; color: var(--paper) !important; }
+
+/* =====================================================
+   ЛЕВОЕ МЕНЮ — карточка как в примере (иконка + заголовок,
+   инверсная чёрная плашка "Navigation", поиск снизу)
+   ===================================================== */
+
+h3.left-menu-text {
+  font-family: 'Space Mono', monospace !important;
+  font-weight: 700 !important;
+  font-size: 13px !important;
+  background: var(--paper) !important;
+  color: var(--ink) !important;
+  border: 1px solid var(--line) !important;
+  border-bottom: none !important;
+  border-radius: 0 !important;
+  padding: 10px 14px !important;
+  text-transform: lowercase !important;
+  letter-spacing: 1px !important;
+}
+
+.left-menu-text {
+  font-family: 'IBM Plex Mono', monospace !important;
+  font-size: 13px !important;
+  background: var(--paper) !important;
+  border-left: 1px solid var(--line) !important;
+  border-right: 1px solid var(--line) !important;
+  border-bottom: 1px solid var(--line) !important;
+  color: var(--ink) !important;
+  padding: 12px 14px !important;
+  line-height: 1.6 !important;
+}
+
+.left-menu-text a {
+  color: var(--ink) !important;
+  font-family: 'IBM Plex Mono', monospace !important;
+  font-size: 13px !important;
+  text-decoration: none !important;
+  border-bottom: 1px dotted var(--ink) !important;
+}
+
+.left-menu-text a:hover { background: var(--ink) !important; color: var(--paper) !important; }
+
+.left-menu-text a.user { color: var(--ink) !important; font-weight: 700 !important; border-bottom: none !important; }
+
+/* Инверсная плашка-разделитель, как "Navigation" на скрине */
+.left-menu-text hr,
+.left-menu__nav-label {
+  display: block !important;
+  background: var(--ink) !important;
+  color: var(--paper) !important;
+  font-family: 'Space Mono', monospace !important;
+  font-size: 12px !important;
+  text-align: left !important;
+  padding: 8px 14px !important;
+  margin: 10px -14px !important;
+  border: none !important;
+  letter-spacing: 0.5px !important;
+}
+
+.right-menu-text {
+  background: var(--paper) !important;
+  border: 1px solid var(--line) !important;
+  border-top: none !important;
+  border-radius: 0 !important;
+  padding: 6px 14px !important;
+}
+
+.right-menu-text a {
+  color: var(--ink) !important;
+  font-family: 'IBM Plex Mono', monospace !important;
+  font-size: 12px !important;
+}
+
+.left-menu__gift img {
+  border: 1px solid var(--line) !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+}
+
+.left-menu__unread-message {
+  background: var(--paper) !important;
+  border: 1px solid var(--line) !important;
+  border-radius: 0 !important;
+}
+
+.left-menu__unread-message h3 {
+  background: var(--ink) !important;
+  color: var(--paper) !important;
+  font-family: 'Space Mono', monospace !important;
+  border-radius: 0 !important;
+}
+
+/* Поиск — плоское поле, только нижняя линия, как в примере */
+.left-menu-text input[type="text"],
+#search_input,
+input.search {
+  border: none !important;
+  border-top: 1px solid var(--line) !important;
+  background: var(--paper) !important;
+  font-family: 'IBM Plex Mono', monospace !important;
+  font-size: 13px !important;
+  color: var(--ink) !important;
+  padding: 10px 14px !important;
+  width: 100% !important;
+  border-radius: 0 !important;
+  outline: none !important;
+}
+
+.left-menu-text input[type="text"]::placeholder,
+#search_input::placeholder,
+input.search::placeholder { color: var(--muted) !important; }
+
+/* =====================================================
+   РАЗДЕЛИТЕЛЬ ДАТ — инверсная плашка, как "Navigation"
+   ===================================================== */
+
+.datebg {
+  font-family: 'Space Mono', monospace !important;
+  font-size: 13px !important;
+  color: var(--paper) !important;
+  letter-spacing: 1px !important;
+  text-align: left !important;
+  padding: 8px 14px !important;
+  background: var(--ink) !important;
+  border-radius: 0 !important;
+  margin: 16px 0 0 !important;
+  text-transform: lowercase !important;
+}
+
+/* =====================================================
+   ПОСТ — плоская карточка с иконкой и заголовком,
+   как "photo post from ..." на скрине
+   ===================================================== */
+
+.post-content {
+  background: var(--paper) !important;
+  border: 1px solid var(--line) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  padding: 0 0 16px !important;
+  margin: 0 0 20px !important;
+}
+
+.post-header {
+  border-bottom: 1px solid var(--line) !important;
+  padding: 12px 16px !important;
+  margin-bottom: 14px !important;
+}
+
+.post-title,
+a.post-title {
+  font-family: 'Space Mono', monospace !important;
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  color: var(--ink) !important;
+  text-decoration: none !important;
+  text-transform: lowercase !important;
+}
+
+.post-title:hover,
+a.post-title:hover { text-decoration: underline !important; }
+
+a.user.post-title-user {
+  font-family: 'IBM Plex Mono', monospace !important;
+  font-weight: 600 !important;
+  color: var(--ink) !important;
+  font-size: 11px !important;
+}
+
+.post-title-date {
+  font-size: 11px !important;
+  color: var(--muted) !important;
+  font-family: 'IBM Plex Mono', monospace !important;
+}
+
+.post-avatar img {
+  border: 1px solid var(--line) !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  filter: grayscale(100%) contrast(1.1) !important;
+  transition: filter 0.25s ease !important;
+}
+
+.post-avatar img:hover {
+  filter: grayscale(0%) contrast(1) !important;
+}
+
+div.sign {
+  font-family: 'IBM Plex Mono', monospace !important;
+  font-size: 11px !important;
+  color: var(--ink) !important;
+  text-align: left !important;
+}
+
+.post-text {
+  font-family: 'IBM Plex Mono', monospace !important;
+  font-size: 14px !important;
+  line-height: 1.75 !important;
+  color: var(--ink) !important;
+  padding: 0 16px !important;
+}
+
+.post-text img {
+  border: 1px solid var(--line) !important;
+  filter: grayscale(100%) !important;
+  max-width: 100% !important;
+  transition: filter 0.25s ease !important;
+}
+
+.post-text img:hover {
+  filter: grayscale(0%) !important;
+}
+
+.post-opt {
+  border-top: 1px solid var(--line) !important;
+  padding: 10px 16px 0 !important;
+  margin-top: 14px !important;
+  font-size: 11px !important;
+  color: var(--muted) !important;
+}
+
+.post-opt a {
+  color: var(--ink) !important;
+  font-family: 'IBM Plex Mono', monospace !important;
+  font-size: 11px !important;
+  text-decoration: none !important;
+  border-bottom: 1px dotted var(--ink) !important;
+}
+
+.post-opt a:hover { background: var(--ink) !important; color: var(--paper) !important; }
+
+/* Удалить / Отмена */
+.post-opt a.delete,
+.post-opt a.remove,
+a.delete,
+a.remove,
+a[class*="delet"],
+.confirm a,
+.confirm-delete a,
+.ub-confirm a {
+  color: var(--ink) !important;
+  font-family: 'IBM Plex Mono', monospace !important;
+  font-weight: 700 !important;
+  font-size: 11px !important;
+  text-decoration: none !important;
+  border-bottom: 1px solid var(--ink) !important;
+}
+
+.post-opt a.delete:hover,
+a.delete:hover,
+a[class*="delet"]:hover,
+.confirm a:hover,
+.ub-confirm a:hover { background: var(--ink) !important; color: var(--paper) !important; }
+
+.post-opt a.cancel,
+a.cancel,
+a[class*="cancel"],
+.confirm a.cancel {
+  color: var(--muted) !important;
+  font-family: 'IBM Plex Mono', monospace !important;
+  font-weight: 700 !important;
+  font-size: 11px !important;
+  text-decoration: none !important;
+  border-bottom: 1px dotted var(--muted) !important;
+}
+
+.post-opt a.cancel:hover,
+a.cancel:hover { color: var(--ink) !important; border-bottom-color: var(--ink) !important; }
+
+.post-likes-count { color: var(--ink) !important; font-weight: 700 !important; }
+
+.comments_count a {
+  font-family: 'IBM Plex Mono', monospace !important;
+  font-weight: 700 !important;
+  font-size: 11px !important;
+  color: var(--ink) !important;
+}
+
+/* Теги — плоские прямоугольные пилюли с рамкой */
+.post__tags-list a.tag,
+a.tag {
+  display: inline-block !important;
+  background: var(--paper) !important;
+  color: var(--ink) !important;
+  font-size: 10px !important;
+  font-family: 'IBM Plex Mono', monospace !important;
+  padding: 3px 10px !important;
+  border-radius: 0 !important;
+  border: 1px solid var(--line) !important;
+  margin: 2px !important;
+  text-decoration: none !important;
+}
+
+.post__tags-list a.tag:hover,
+a.tag:hover { background: var(--ink) !important; color: var(--paper) !important; }
+
+/* =====================================================
+   КОММЕНТАРИИ
+   ===================================================== */
+
+.post-comment,
+.comment-item,
+div.comment,
+div[class*="comment"] {
+  background: var(--paper) !important;
+  border: 1px solid var(--line) !important;
+  border-radius: 0 !important;
+  padding: 12px 16px !important;
+  margin-bottom: 10px !important;
+  color: var(--ink) !important;
+  font-family: 'IBM Plex Mono', monospace !important;
+  font-size: 13px !important;
+}
+
+/* =====================================================
+   ФОРМА НОВОГО ПОСТА
+   ===================================================== */
+
+.textareabg {
+  background: var(--paper) !important;
+  border: 1px solid var(--line) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  padding: 18px 20px !important;
+  color: var(--ink) !important;
+}
+
+.textareabg textarea,
+.postdesc {
+  border: 1px solid var(--line) !important;
+  border-radius: 0 !important;
+  font-family: 'IBM Plex Mono', monospace !important;
+  font-size: 14px !important;
+  padding: 10px 14px !important;
+  background: var(--paper) !important;
+  color: var(--ink) !important;
+  width: 100% !important;
+  outline: none !important;
+  resize: vertical !important;
+}
+
+.textareabg textarea:focus,
+.postdesc:focus { border-color: var(--ink) !important; background: var(--hover) !important; }
+
+.textareabg input[type="text"],
+.input-mood, .input-music, .input-want, .input-tags {
+  border: none !important;
+  border-bottom: 1px solid var(--line) !important;
+  background: transparent !important;
+  font-family: 'IBM Plex Mono', monospace !important;
+  font-size: 13px !important;
+  color: var(--ink) !important;
+  padding: 4px 6px !important;
+  outline: none !important;
+}
+
+.textareabg select, select {
+  background: var(--paper) !important;
+  color: var(--ink) !important;
+  border: 1px solid var(--line) !important;
+  border-radius: 0 !important;
+  font-family: 'IBM Plex Mono', monospace !important;
+  padding: 4px 8px !important;
+}
+
+/* Кнопки — прямоугольные, инверсия при наведении */
+.textareabg input[type="submit"],
+form input[type="submit"] {
+  background: var(--ink) !important;
+  border: 1px solid var(--ink) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  color: var(--paper) !important;
+  font-family: 'Space Mono', monospace !important;
+  font-weight: 700 !important;
+  font-size: 12px !important;
+  padding: 8px 20px !important;
+  cursor: pointer !important;
+  margin-right: 6px !important;
+  text-transform: lowercase !important;
+}
+
+.textareabg input[type="submit"]:hover,
+form input[type="submit"]:hover {
+  background: var(--paper) !important;
+  color: var(--ink) !important;
+}
+
+.textareabg input[type="button"],
+form input[type="button"],
+.textareabg input[type="reset"],
+form input[type="reset"],
+.textareabg button,
+form button,
+.textareabg a.cancel,
+form a.cancel,
+.textareabg a.btn,
+form a.btn,
+.textareabg .close_editor,
+form .close_editor {
+  background: var(--paper) !important;
+  border: 1px solid var(--ink) !important;
+  border-radius: 0 !important;
+  color: var(--ink) !important;
+  font-family: 'Space Mono', monospace !important;
+  font-weight: 700 !important;
+  font-size: 12px !important;
+  padding: 8px 20px !important;
+  cursor: pointer !important;
+  text-decoration: none !important;
+  display: inline-block !important;
+  margin-right: 6px !important;
+  text-transform: lowercase !important;
+}
+
+.textareabg input[type="button"]:hover,
+form input[type="button"]:hover,
+.textareabg button:hover,
+form button:hover,
+.textareabg a.cancel:hover,
+form a.cancel:hover {
+  background: var(--ink) !important;
+  color: var(--paper) !important;
+}
+
+/* =====================================================
+   ОБЩИЕ ССЫЛКИ
+   ===================================================== */
+
+a { color: var(--ink) !important; }
+a:hover { text-decoration: underline !important; }
+
+a.user {
+  color: var(--ink) !important;
+  font-family: 'IBM Plex Mono', monospace !important;
+  font-weight: 700 !important;
+  font-size: 13px !important;
+  text-decoration: none !important;
+  border-bottom: 1px solid var(--ink) !important;
+}
+
+a.blog {
+  color: var(--ink) !important;
+  font-family: 'IBM Plex Mono', monospace !important;
+  font-size: 13px !important;
+  text-decoration: none !important;
+  border-bottom: 1px dotted var(--ink) !important;
+}
+
+/* =====================================================
+   СЧЁТЧИК ЗАПИСЕЙ
+   ===================================================== */
+
+.blog_total_counter {
+  background: var(--paper) !important;
+  border: 1px solid var(--line) !important;
+  border-radius: 0 !important;
+}
+
+.blog_total_counter h2 {
+  font-family: 'Space Mono', monospace !important;
+  color: var(--ink) !important;
+  font-size: 20px !important;
+  font-weight: 700 !important;
+}
+
+/* =====================================================
+   ФУТЕР
+   ===================================================== */
+
+.bottombg {
+  background: var(--ink) !important;
+  border-radius: 0 !important;
+  font-family: 'IBM Plex Mono', monospace !important;
+  font-size: 11px !important;
+  color: var(--paper) !important;
+}
+
+.bottombg a { color: var(--paper) !important; text-decoration: underline !important; }
+
+#footer {
+  font-family: 'Space Mono', monospace !important;
+  font-size: 12px !important;
+  color: var(--muted) !important;
+}
+
+/* =====================================================
+   СКРОЛЛБАР
+   ===================================================== */
+
+::-webkit-scrollbar { width: 10px !important; background: var(--paper) !important; }
+::-webkit-scrollbar-track { background: var(--paper) !important; }
+::-webkit-scrollbar-thumb { background: var(--ink) !important; border-radius: 0 !important; }
+
+/* =====================================================
+   ИЗОБРАЖЕНИЯ В ПОСТАХ
+   ===================================================== */
+
+.imagefsme {
+  border-radius: 0 !important;
+  border: 1px solid var(--line) !important;
+  max-width: 100% !important;
+  filter: grayscale(100%) !important;
+  transition: filter 0.25s ease !important;
+}
+
+.imagefsme:hover {
+  filter: grayscale(0%) !important;
+}
+
+/* =====================================================
+   МОДАЛКИ
+   ===================================================== */
+
+.modal-content {
+  background: var(--paper) !important;
+  border: 1px solid var(--line) !important;
+  border-radius: 0 !important;
+  color: var(--ink) !important;
+}
+
+.modal-header, .modal-footer { border-color: var(--line) !important; }
+
+.modal-title {
+  font-family: 'Space Mono', monospace !important;
+  font-size: 16px !important;
+  color: var(--ink) !important;
+}
+
+/* =====================================================
+   МОБИЛЬНОЕ МЕНЮ
+   ===================================================== */
+
+.mobile_open_menu h3.left-menu-text {
+  font-family: 'Space Mono', monospace !important;
+  background: var(--ink) !important;
+  color: var(--paper) !important;
+  border-radius: 0 !important;
+  cursor: pointer !important;
+}
+
+.menu__box { background: var(--paper) !important; }
+
+.menu__item {
+  color: var(--ink) !important;
+  font-family: 'IBM Plex Mono', monospace !important;
+}
+
+.menu__item:hover { background: var(--ink) !important; color: var(--paper) !important; }
+
+/* =====================================================
+   ПЕРЕСТАНОВКА САЙДБАРА ВПРАВО (только на десктопе,
+   мобильная раскладка не трогается)
+   ===================================================== */
+
+@media (min-width: 768px) {
+  main.py-4 {
+    display: flex !important;
+    align-items: flex-start !important;
+  }
+
+  .content {
+    order: 1 !important;
+    flex: 1 1 auto !important;
+    min-width: 0 !important;
+  }
+
+  .left-menu {
+    order: 2 !important;
+    flex: 0 0 auto !important;
+  }
+}
